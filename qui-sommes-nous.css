@@ -1,0 +1,208 @@
+:root {
+  --main-pink: #d92eaf;
+  --main-white: #fff;
+  --main-dark: #222;
+  --card-bg: #f6f6f6;
+  --footer-bg: #191b17;
+  --contact-bg: #d8d3d1;
+}
+
+/* Header */
+.header-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 6vw 0 6vw;
+  background: var(--main-white);
+}
+
+.logo-intro {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.logo-intro img {
+  height: 55px;
+}
+.logo-intro span {
+  color: var(--main-pink);
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: .05em;
+}
+
+.nav-intro ul {
+  list-style: none;
+  display: flex;
+  gap: 46px;
+  margin: 0;
+  padding: 0;
+}
+.nav-intro a {
+  text-decoration: none;
+  color: var(--main-pink);
+  font-weight: bold;
+  font-size: 1.07em;
+  letter-spacing: .04em;
+  transition: color .2s;
+}
+.nav-intro a:hover {
+  color: #a31979;
+  text-decoration: underline;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #dce6fe; /* couleur du fond comme dans ton exemple */
+  box-shadow: 0 0 2px #bdbdbd33;
+}
+
+.logo-circle img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%; /* si le logo est carré pour le rendre rond */
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Main Section */
+main {
+  background: var(--main-white);
+}
+.intro-section {
+  max-width: 950px;
+  margin: 30px auto 0 auto;
+  padding: 0 18px;
+  text-align: left;
+}
+.intro-section h1 {
+  color: var(--main-pink);
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 34px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+.intro-text p {
+  font-size: 1.09em;
+  line-height: 1.7;
+  color: var(--main-dark);
+  margin-bottom: 18px;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Bar */
+.contact-bar {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: var(--contact-bg);
+  padding: 38px 0 38px 0;
+  color: #222;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.contact-bar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.18em;
+  color: var(--main-dark);
+  font-weight: 500;
+}
+.contact-item i {
+  font-size: 1.5em;
+  color: var(--main-pink);
+  transition: color 0.2s;
+  margin-bottom: 2px;
+}
+.contact-item span {
+  color: var(--main-dark);
+  letter-spacing: 0.5px;
+}
+
+/* Footer */
+.footer {
+  background: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 54px 0 28px 0;
+}
+.footer-content p {
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 1.13em;
+  letter-spacing: 1px;
+}
+.footer-icons a {
+  display: inline-block;
+  margin: 0 20px;
+  transition: transform .2s, color .2s;
+  color: #fff;
+  font-size: 2em;
+}
+.footer-icons a:hover {
+  transform: scale(1.2);
+  color: var(--main-pink);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .contact-bar-content {
+    gap: 50px;
+  }
+  .contact-item {
+    font-size: 1em;
+  }
+  .contact-item i {
+    font-size: 1.2em;
+  }
+  .intro-section { max-width: 700px; }
+}
+@media (max-width: 700px) {
+  .contact-bar-content {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .contact-bar {
+    padding: 24px 0 24px 0;
+  }
+  .header-intro { flex-direction: column; gap: 14px; padding: 22px 0 0 0; }
+  .intro-section { margin-top: 10px; }
+}
+@media (max-width: 450px) {
+  .logo-intro img { height: 40px; }
+  .logo-intro span { font-size: 1.15em; }
+  .nav-intro ul { gap: 16px; font-size: .97em;}
+  .footer-icons a { font-size: 1.2em;}
+}
